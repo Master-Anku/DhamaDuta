@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Card JSON Search</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <h1 class="logo">DhammaDuta</h1>
+      <!-- <div class="menu-icon" id="menu-icon">☰</div> -->
+
+      <nav>
+        <ul id="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header end -->
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search by name, email,address or month..."
+      />
+    </div>
+
+    <div class="container">
+      <h2>Student List</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nobis totam natus odio quam officiis delectus repellat iste, nesciunt accusantium.</p>
+      <div class="gallery" id="gallery"></div>
+
+      <div class="info-box" id="infoBox">
+        <h2>Person Information</h2>
+        <div id="infoDetails"></div>
+        <div id="monthMatch" class="match-note"></div>
+        <button class="back-btn" onclick="goBack()">Back</button>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

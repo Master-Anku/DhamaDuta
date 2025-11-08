@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beautiful Header Design</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f3f4f6;
+    }
+
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #4b6cb7, #182848);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #fff;
+      color: #333;
+      top: 35px;
+      left: 0;
+      min-width: 180px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background: #4b6cb7;
+      color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Mobile Menu */
+    .menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #182848;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .dropdown-content {
+        position: static;
+        background: #243b55;
+      }
+
+      .dropdown-content a {
+        color: #fff;
+      }
+
+      .dropdown-content a:hover {
+        background: #4b6cb7;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">✨ MyWebsite</div>
+    <div class="menu-icon" id="menu-icon">☰</div>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li class="dropdown">
+          <a href="#">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Web Design</a>
+            <a href="#">App Development</a>
+            <a href="#">SEO Marketing</a>
+          </div>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section style="padding-top:100px; text-align:center;">
+    <h1>Welcome to My Beautiful Header Design 🌸</h1>
+    <p>Scroll or resize to see responsiveness.</p>
+  </section>
+
+  <script>
+    const menuIcon = document.getElementById("menu-icon");
+    const navList = document.getElementById("nav-list");
+
+    menuIcon.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
